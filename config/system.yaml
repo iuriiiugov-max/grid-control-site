@@ -1,0 +1,9 @@
+project: crypto-control
+environment: bootstrap
+mode:
+  manual_analysis: true
+  auto_execution: false
+  exchange_write: false
+fail_closed:
+  critical_state_invalid: true
+  sync_mismatch: true
