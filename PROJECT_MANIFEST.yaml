@@ -1,0 +1,23 @@
+manifest_version: 1
+project: crypto-control
+status: bootstrap
+mode:
+  manual_analysis: true
+  auto_execution: false
+  exchange_write: false
+migration:
+  strategy: parallel-shadow
+  old_contour_active: true
+components:
+  backend:
+    status: not_deployed
+  postgresql:
+    status: not_deployed
+  reconciliation:
+    status: not_deployed
+  telegram:
+    status: existing_external_contour
+  observer:
+    status: existing_external_contour
+sync:
+  status: bootstrap
