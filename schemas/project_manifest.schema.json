@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CRYPTO CONTROL Project Manifest",
+  "type": "object",
+  "required": ["manifest_version", "project", "status", "mode", "components", "sync"],
+  "properties": {
+    "manifest_version": {"type": "integer", "minimum": 1},
+    "project": {"const": "crypto-control"},
+    "status": {"type": "string"},
+    "mode": {"type": "object"},
+    "components": {"type": "object"},
+    "sync": {"type": "object"}
+  },
+  "additionalProperties": true
+}
