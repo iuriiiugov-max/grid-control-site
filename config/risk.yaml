@@ -1,0 +1,6 @@
+version: 1
+status: bootstrap
+hard_gates:
+  enabled: true
+  allow_exchange_write: false
+  allow_auto_execution: false
