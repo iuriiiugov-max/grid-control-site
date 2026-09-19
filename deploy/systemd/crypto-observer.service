@@ -1,0 +1,25 @@
+[Unit]
+Description=CRYPTO CONTROL Observer v0.6 shadow collector
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=crypto
+Group=crypto
+WorkingDirectory=/opt/crypto-control/backend/observer/runtime
+Environment=GRID_PILOT26_SECRET_DIR=/etc/crypto-control/observer-secrets
+ExecStart=/opt/crypto-control/.venv/bin/python collector.py
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/crypto-control/backend/observer/runtime/out /opt/crypto-control/backend/observer/runtime/logs
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+
+[Install]
+WantedBy=multi-user.target
