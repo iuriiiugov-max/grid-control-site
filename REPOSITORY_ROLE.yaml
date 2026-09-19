@@ -1,0 +1,14 @@
+project: crypto-control
+role: core-monorepo
+authoritative_for:
+  - source_code
+  - machine_config
+  - schemas
+  - deployment_definitions
+public_surface:
+  path: public/
+runtime_authority: false
+secrets_allowed: false
+mode:
+  auto_execution: false
+  exchange_write: false
